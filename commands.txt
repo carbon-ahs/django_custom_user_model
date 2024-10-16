@@ -1,0 +1,9 @@
+py -m venv venv
+source venv/Scripts/activate
+pip install django
+django-admin startproject core .
+py manage.py startapp users
+
+py manage.py makemigrations --dry-run // to test migration
+py manage.py makemigrations
+py manage.py migrate
